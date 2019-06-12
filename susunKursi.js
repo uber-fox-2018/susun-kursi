@@ -11,32 +11,35 @@
 'use strict'
 
 function generateSeats(row) {
-	let seats = []
-	for(let i=0; i<rowa; i++) {
-		seat.push([])
+	var seats = []
+	for (var i = 0; i < row; i++) {
+		seats.push([])
 	}
 	return seats
 }
 
 function managePerson(arr, rowSeats) {
-	let seats = generateSeat(rowSeats)
-	let row = 0
-
-	for(let i=0; i<arr.length-1; i++) {
-		seat[row].push(arr[i])
-		if(row <= 2) {
-			row++
+	var seats = generateSeats(rowSeats)
+	var row = 0
+	for (var i = 0; i < arr.length; i++) {
+		seats[row].push(arr[i])
+		if (row == rowSeats-1) {
+			row = 0
 		} else {
-			row == 0
+			row++
 		}
 	}
 	printSeats(seats)
 }
 
 function printSeats(seats) {
-	for(let i=1; i<seats.length; i++) {
-		console.log(`Baris ${i} : `, seats[i])
+	for (var i = 0; i < seats.length; i++) {
+		console.log('Baris ' + i + ' : ', seats[i])
 	}
 }
 
-managePerson(['a','b','c','d','e','f','g','h','i','j'], 3)
+managePerson(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'], 3)
+
+
+
+// belum di push
